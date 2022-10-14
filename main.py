@@ -5,7 +5,6 @@ import os
 # these modules are for querying the Hugging Face model
 import json
 import requests
-from keep_alive import keep_alive
 
 # the Discord Python API
 import discord
@@ -83,7 +82,6 @@ class MyClient(discord.Client):
 def main():
   # DialoGPT-medium-joshua is my model name
   client = MyClient('DialoGPT-small-jacksparrow')
-  keep_alive()
   client.run(os.environ['DISCORD_TOKEN'])
 
 
